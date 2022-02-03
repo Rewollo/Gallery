@@ -1,3 +1,8 @@
-<div *ngFor="let user of users">
-    <app-users [user] = 'user' [albums] = 'getUsersAlbum(album.userId)' *ngFor='let album of albums'></app-users>
+<div class="userwrap" *ngFor="let user of users">
+    <app-users [user] = 'user' [albums] = 'getUsersAlbum(user.id)' >
+    </app-users>
+    <!-- <div *ngIf='click' > -->
+        <app-photos [photo]='photo' [photos]="getUsersPhoto(user.id)">
+        </app-photos>
+    <!-- </div> -->
 </div>

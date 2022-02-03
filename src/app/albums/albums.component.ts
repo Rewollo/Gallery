@@ -19,6 +19,8 @@ export class AlbumsComponent implements OnInit {
     title: ''
   }
 
+  @Input() albums: IAlbum[] = [];
+
   // @Input() user: IUser = {
   //   id: 0,
   //   name: ''
