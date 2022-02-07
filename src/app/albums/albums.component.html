@@ -1,2 +1,4 @@
-<h2> {{album.id}} {{this.album.title}} </h2>
-<app-photos *ngFor="let photo of albums"></app-photos>
+<div *ngIf="album !== undefined">
+  <h2>{{album.id}} {{this.album.title}}</h2>
+  <app-photos *ngFor="let photo of photos" [photo]="photo"></app-photos>
+</div>
