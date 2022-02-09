@@ -1,9 +1,13 @@
 
     <h2> {{user.name}} </h2>
     <h3> Выберите альбом </h3>
-    <select size="1" [(ngModel)] = selectedValue>
-        <option *ngFor="let album of albums index as i">
-            {{i + 1}}
+
+    <select size="1" [(ngModel)]=selectedAlbumId >
+        <option *ngFor="let album of albums index as i" [value]="album.id">
+            {{i + 1 + ': '}} {{album.title}}
         </option>
-    </select>    
-    <button type="submit" (click)="onClick()"> Открыть альбом </button>
+    </select>
+
+    <app-albums [album]="getAlbumById(selectedAlbumId)" [photos]="getPhotosByAlbumId(selectedAlbumId)"></app-albums>
+
+    <hr>
