@@ -1,8 +1,5 @@
 <div class="userwrap" *ngFor="let user of users">
-    <app-users [user] = 'user' [albums] = 'getUsersAlbum(user.id)' >
-    </app-users>
-    <!-- <div *ngIf='click' > -->
-        <app-photos [photo]='photo' [photos]="getUsersPhoto(user.id)">
-        </app-photos>
-    <!-- </div> -->
+
+  <app-users [user]='user' [albums]='getUserAlbums(user.id)' [photos]='getUserPhotos(user.id)'></app-users>
+  
 </div>

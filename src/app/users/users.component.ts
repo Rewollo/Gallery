@@ -3,51 +3,30 @@ import { IAlbum } from '../album.interface';
 import { IUser } from '../user.interface';
 import { IPhoto } from '../photo.interface';
 
-
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css']
+  styleUrls: ['./users.component.css'],
 })
 export class UsersComponent implements OnInit {
-
-
   @Input() user: IUser = {
     id: 0,
-    name: ''
-  }
-
+    name: '',
+  };
 
   @Input() albums: IAlbum[] = [];
-
-  @Input() photo: IPhoto = {
-    albumId: 0,
-    id: 0,
-    title: '',
-    url: ''
-  }
-
   @Input() photos: IPhoto[] = [];
-  
 
-  click: boolean = false;
-  
+  selectedAlbumId: number | string = -1; // из select возвращается строка, а не число
 
-  selectedValue: number = 1;
-
-  constructor() { }
-  
-
-
-  onClick() {
-    this.user.id = this.selectedValue;
-      return (this.click = true, console.log(this.selectedValue));
+  getAlbumById(albumId: number | string): IAlbum | undefined {
+    // из select возвращается строка, поэтому просто "==". можно обезопасить этот поиск дополнительными преобразованиями.
+    return this.albums.find(elem => elem.id == albumId);
   }
 
-
-
-  ngOnInit(): void {
+  getPhotosByAlbumId(albumId: number | string): IPhoto[] {
+    return this.photos.filter(photo => photo.albumId == albumId);
   }
 
-
+  ngOnInit(): void {}
 }
