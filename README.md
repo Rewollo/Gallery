@@ -1,5 +1,18 @@
 # Gallery
 
+Пример простой галереи на Angular. Итоговый проект по курсу изучения фреймворка Angular.
+В проекте используются данные с JSONPlaceholder.
+
+![Gallery](https://user-images.githubusercontent.com/95663034/153779355-e407eb87-770e-4c03-9cd7-fbd3dd832b3e.gif)
+
+##Запуск
+
+Необходим установленный Node.js.
+
+Запустите в терминале проекта следующие команды:<br>
+npm install<br>
+ng serve
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
 ## Development server
