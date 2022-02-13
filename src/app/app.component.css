@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .userwrap {
     width: 60%;
     margin: auto 20%;
@@ -5,4 +6,13 @@
     text-align: center;
     background: linear-gradient(50deg, lightblue, lightcyan);
     padding-top: 50px;
+=======
+.userwrap {
+    width: 60%;
+    margin: auto 20%;
+    min-width: 500px;
+    text-align: center;
+    background: linear-gradient(50deg, lightblue, lightcyan);
+    padding-top: 50px;
+>>>>>>> 7904ce022fd92e9894b0dfe52c4050c0efcc7d74
 }
