@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h2> {{user.name}} </h2>
 <h3> Выберите альбом </h3>
 
@@ -11,18 +10,3 @@
 <app-albums [album]="getAlbumById(selectedAlbumId)" [photos]="getPhotosByAlbumId(selectedAlbumId)"></app-albums>
 
 <hr>
-=======
-
-    <h2> {{user.name}} </h2>
-    <h3> Выберите альбом </h3>
-
-    <select size="1" [(ngModel)]=selectedAlbumId >
-        <option *ngFor="let album of albums index as i" [value]="album.id">
-            {{i + 1 + ': '}} {{album.title}}
-        </option>
-    </select>
-
-    <app-albums [album]="getAlbumById(selectedAlbumId)" [photos]="getPhotosByAlbumId(selectedAlbumId)"></app-albums>
-
-    <hr>
->>>>>>> 7904ce022fd92e9894b0dfe52c4050c0efcc7d74
