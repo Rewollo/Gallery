@@ -1,1 +1,7 @@
-<h2> {{album.id}} {{album.title}} </h2>
+<div class="buttonwrap">
+  <button type="button" (click)="openAlbum()"> Открыть/Закрыть альбом </button>
+</div>
+<div *ngIf="clickStatus == true && album !== undefined">
+  <h2>{{album.id}}: {{this.album.title}}</h2>
+  <app-photos *ngFor="let photo of photos" [photo]="photo"></app-photos>
+</div>

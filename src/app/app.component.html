@@ -1,3 +1,5 @@
-<div *ngFor="let user of users">
-    <app-users [user] = 'user' [albums] = 'getUsersAlbum(user.id)'></app-users>
+<div class="userwrap" *ngFor="let user of users">
+
+  <app-users [user]='user' [albums]='getUserAlbums(user.id)' [photos]='getUserPhotos(user.id)'></app-users>
+  
 </div>

@@ -1,0 +1,8 @@
+.userwrap {
+    width: 60%;
+    margin: auto 20%;
+    min-width: 500px;
+    text-align: center;
+    background: linear-gradient(50deg, lightblue, lightcyan);
+    padding-top: 50px;
+}

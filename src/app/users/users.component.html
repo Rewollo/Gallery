@@ -1,9 +1,12 @@
 <h2> {{user.name}} </h2>
-<div *ngFor="let album of albums index as i">
-    <h3>
+<h3> Выберите альбом </h3>
+
+<select size="1" [(ngModel)]=selectedAlbumId >
+    <option *ngFor="let album of albums index as i" [value]="album.id">
         {{i + 1 + ': '}} {{album.title}}
-    </h3>
-    <div *ngFor="let photo of photos">
-        <app-photos [photo] = 'photo' [photos] = 'getUsersPhotos(photo.albumId)'></app-photos>
-    </div>
-</div>
+    </option>
+</select>
+
+<app-albums [album]="getAlbumById(selectedAlbumId)" [photos]="getPhotosByAlbumId(selectedAlbumId)"></app-albums>
+
+<hr>
