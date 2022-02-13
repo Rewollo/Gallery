@@ -14,16 +14,14 @@ export class AppComponent {
   photos: IPhoto[] = [];
   users: IUser[] = [];
 
-  // @Input() user: IUser = {
-  //   id: 0,
-  //   name: ''
-  // }
 
   @Input() album: IAlbum = {
     userId: 0,
     id: 0,
     title: ''
   }
+
+  isVisible: boolean = false;
 
 constructor() {
   this.getAlbums();

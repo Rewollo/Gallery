@@ -10,19 +10,11 @@ import { IPhoto } from '../photo.interface';
 })
 export class AlbumsComponent implements OnInit {
 
-  // albums: IAlbum[] = [];
-  // users: IUser[] = [];
-
   @Input() album: IAlbum = {
     userId: 0,
     id: 0,
     title: ''
   }
-
-  // @Input() user: IUser = {
-  //   id: 0,
-  //   name: ''
-  // }
 
   constructor() { }
 
